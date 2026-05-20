@@ -350,68 +350,98 @@
         </div>
 
         <style>
-            .flex-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-            }
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
 
-            .flex-item {
-                flex: 1 1 100%;
-                max-width: 300px;
-                min-width: 150px;
-                margin: 10px;
-                }
+    .flex-item {
+        width: 250px;
+        text-align: center;
+    }
 
+    .flex-item img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: top;
+    }
 
-            .flex-item img {
-                border-radius: 50%;
-                width: 200px; /* 固定宽度 */
-                height: 200px; /* 固定高度 */
-                object-fit: cover; /* 保持图片比例并裁剪 */
-                object-position: top; /* 居中显示 */
-            }
+    .chair-name {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
 
-            .flex-item h4 {
-                margin-top: 15px;
-                text-align: center;
-            }
-        </style>
+    .chair-name:hover {
+        color: #555;
+        text-decoration: none;
+    }
+</style>
+
+<section class="bg-light page-section" id="organizers">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">WORKSHOP CHAIRS</h2>
+                <hr class="divider my-4" />
+            </div>
+        </div>
 
         <div class="flex-container">
-    <div class="flex-item" data-animation-delay="200">
-        <a href="https://charliezhaoyinpeng.github.io/homepage/" target="blank">
-            <img class="img-responsive img-rounded" src="img/zhaochen.jpg" alt="Chen Zhao">
-        </a>
-        <h4 class="section-heading">
-            <a href="https://charliezhaoyinpeng.github.io/homepage/" target="blank">
-                <font color="Black">Chen Zhao</font>
-            </a>
-        </h4>
-    </div>
 
-    <div class="flex-item" data-animation-delay="200">
-        <a href="https://yhe15.people.wm.edu/" target="blank">
-            <img class="img-responsive img-rounded" src="img/Yi He_v2.png" alt="Yi He">
-        </a>
-        <h4 class="section-heading">
-            <a href="https://yhe15.people.wm.edu/" target="blank">
-                <font color="Black">Yi He</font>
-            </a>
-        </h4>
-    </div>
+            <div class="flex-item" data-animation-delay="200">
+                <a href="https://charliezhaoyinpeng.github.io/homepage/" target="_blank">
+                    <img class="img-responsive img-rounded"
+                         src="img/zhaochen.jpg"
+                         alt="Chen Zhao">
+                </a>
 
-    <div class="flex-item" data-animation-delay="200">
-        <a href="https://www.fau.edu/engineering/directory/faculty/zhu/" target="blank">
-            <img class="img-responsive img-rounded" src="img/Xingquan Zhu.png" alt="Xingquan Zhu">
-        </a>
-        <h4 class="section-heading">
-            <a href="https://www.fau.edu/engineering/directory/faculty/zhu/" target="blank">
-                <font color="Black">Xingquan Zhu</font>
-            </a>
-        </h4>
-    </div>
-</div>
+                <a class="chair-name"
+                   href="https://charliezhaoyinpeng.github.io/homepage/"
+                   target="_blank">
+                    Chen Zhao
+                </a>
+            </div>
+
+            <div class="flex-item" data-animation-delay="200">
+                <a href="https://yhe15.people.wm.edu/" target="_blank">
+                    <img class="img-responsive img-rounded"
+                         src="img/Yi He_v2.png"
+                         alt="Yi He">
+                </a>
+
+                <a class="chair-name"
+                   href="https://yhe15.people.wm.edu/"
+                   target="_blank">
+                    Yi He
+                </a>
+            </div>
+
+            <div class="flex-item" data-animation-delay="200">
+                <a href="https://www.fau.edu/engineering/directory/faculty/zhu/" target="_blank">
+                    <img class="img-responsive img-rounded"
+                         src="img/Xingquan Zhu.png"
+                         alt="Xingquan Zhu">
+                </a>
+
+                <a class="chair-name"
+                   href="https://www.fau.edu/engineering/directory/faculty/zhu/"
+                   target="_blank">
+                    Xingquan Zhu
+                </a>
+            </div>
+
+        </div>
     </div>
 </section>
 
