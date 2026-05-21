@@ -20,6 +20,155 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="dist/css/styles.css" rel="stylesheet" />
+
+    <!-- Custom responsive overrides (consolidated) -->
+    <style>
+        /* ---------- Masthead ---------- */
+        .masthead h1 {
+            font-size: clamp(1.5rem, 5vw, 3rem);
+            line-height: 1.25;
+        }
+        .masthead-link {
+            font-size: clamp(1rem, 2.5vw, 1.75rem);
+            color: white;
+        }
+        .masthead-link:hover,
+        .masthead-link:focus {
+            color: #ddd;
+            text-decoration: underline;
+        }
+
+        /* ---------- Section headings on small screens ---------- */
+        @media (max-width: 576px) {
+            .section-heading {
+                font-size: 1.5rem;
+            }
+            .lead {
+                font-size: 1rem;
+            }
+        }
+
+        /* ---------- Tables ---------- */
+        #schedule .table td {
+            white-space: normal;
+            word-break: break-word;
+        }
+        .table-responsive {
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* ---------- Submission section ---------- */
+        .submission-content p {
+            margin-bottom: 1rem;
+        }
+
+        /* ---------- Workshop Chairs (flex layout) ---------- */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+        .flex-item {
+            flex: 1 1 220px;
+            max-width: 280px;
+            text-align: center;
+        }
+        .flex-item img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        .chair-name {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+        .chair-name:hover,
+        .chair-name:focus {
+            color: #555;
+            text-decoration: none;
+        }
+
+        /* ---------- Program Chairs (grid) ---------- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 992px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 400px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .person {
+            text-align: center;
+        }
+        .person img {
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        .section-heading a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* ---------- Contact info ---------- */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: black;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .contact-item {
+            text-align: left;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            flex: 1 1 280px;
+            max-width: 360px;
+        }
+        .contact-item a {
+            color: black;
+            word-break: break-word;
+        }
+        .contact-item b {
+            font-size: 1.2em;
+        }
+
+        /* ---------- Generic image safety ---------- */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -32,19 +181,15 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Introduction">Introduction</a></li> -->
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Dates">Key Dates</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#topics">Topics</a></li> -->
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#submission">Submission</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#schedule">Program</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#organizers ">Committee</a></li>
-
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#committee">Committee</a></li> -->
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contacts">Contacts</a></li> -->
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#organizers">Committee</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <!-- Masthead-->
     <header class="masthead">
         <div class="container h-100">
@@ -52,18 +197,17 @@
                 <div class="col-lg-12 align-self-end">
                     <h1 class="text-white font-weight-bold"><b>International Workshop on Adaptable, Reliable, and
                             Responsible Learning (ARRL)</b></h1>
-
                     <hr class="divider my-4" />
                 </div>
                 <div class="col-lg-12 align-self-baseline">
-                    <p><a style="font-size:3vw; color:white" href="http://icdm2026.neu.edu.cn/main.htm"
+                    <p><a class="masthead-link" href="http://icdm2026.neu.edu.cn/main.htm"
                             target="_blank">Co-located with IEEE ICDM 2026</a>.
-                    <p class="text-white-75 font-weight-light mb-5">November 12-15, Shenyang, China
-</p>
+                    <p class="text-white-75 font-weight-light mb-5">November 12-15, Shenyang, China</p>
                 </div>
             </div>
         </div>
     </header>
+
     <!-- Introduction-->
     <section class="page-section" id="Introduction">
         <div class="container">
@@ -117,53 +261,55 @@
                     provide significant value to the community.
                 </p>
                 <p class="lead" style="text-align:justify">
-                    Past Events: Held on 
-                    <a href="https://arrl-icdm.github.io/arrl2023/" target="_blank">ARRL 2023 (Shanghai, China)</a>,  
+                    Past Events: Held on
+                    <a href="https://arrl-icdm.github.io/arrl2023/" target="_blank">ARRL 2023 (Shanghai, China)</a>,
                     <a href="https://arrl-icdm.github.io/arrl2024/" target="_blank">ARRL 2024 (Abu Dhabi, UAE)</a> and
                     <a href="https://arrl-icdm.github.io/arrl2025/" target="_blank">ARRL 2025 (Washington DC, USA)</a>.
                 </p>
-        </div>
-        </div>
-    </section>
-    <!-- Dates-->
-    <section class="page-section" id="Dates">
-    <div class="container">
-        <h2 class="text-center mt-0">IMPORTANT DATES</h2>
-        <hr class="divider my-4" />
-
-        <div class="row justify-content-center">
-            <div class="col-lg-10 col-md-10 col-sm-12 col-12 text-center">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover white mb-0">
-                        <tbody>
-                            <tr>
-                                <td>August 20<sup>th</sup>, 2026</td>
-                                <td>Papers Submission</td>
-                            </tr>
-                            <tr>
-                                <td>September 18<sup>th</sup>, 2026</td>
-                                <td>Author Notification</td>
-                            </tr>
-                            <tr>
-                                <td>October 5<sup>th</sup>, 2026</td>
-                                <td>Camera-ready and Copyright forms</td>
-                            </tr>
-                            <tr>
-                                <td>November 12<sup>nd</sup>, 2026</td>
-                                <td>Workshop Date</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p class="text-muted mt-2">
-                    <small>All deadlines are due 11:59 pm Anywhere on Earth (AOE).</small>
-                </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- Dates-->
+    <section class="page-section" id="Dates">
+        <div class="container">
+            <h2 class="text-center mt-0">IMPORTANT DATES</h2>
+            <hr class="divider my-4" />
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-10 col-sm-12 col-12 text-center">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover white mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>August 20<sup>th</sup>, 2026</td>
+                                    <td>Papers Submission</td>
+                                </tr>
+                                <tr>
+                                    <td>September 18<sup>th</sup>, 2026</td>
+                                    <td>Author Notification</td>
+                                </tr>
+                                <tr>
+                                    <td>October 5<sup>th</sup>, 2026</td>
+                                    <td>Camera-ready and Copyright forms</td>
+                                </tr>
+                                <tr>
+                                    <td>November 12<sup>nd</sup>, 2026</td>
+                                    <td>Workshop Date</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="text-muted mt-2">
+                        <small>All deadlines are due 11:59 pm Anywhere on Earth (AOE).</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics-->
     <section class="page-section" id="topics">
         <div class="container">
             <h2 class="text-center mt-0">TOPICS</h2>
@@ -217,7 +363,7 @@
         </div>
     </section>
 
-
+    <!-- Submission -->
     <section class="page-section" id="submission">
         <div class="container">
             <div class="row">
@@ -226,25 +372,18 @@
                     <hr class="divider my-4" />
                 </div>
 
-                <!--                  <p>We will leverage following channels to attack quality submissions:</p>-->
-                <!--                  <br/>-->
-                <ul class="lead">
-
+                <div class="col-lg-12 submission-content">
                     <p class="lead" style="text-align:justify">
-
                         Paper submission link: <u><a style="color:black"
-                                href=" https://wi-lab.com/cyberchair/2025/icdm25/scripts/submit.php?subarea=S45">International
-                                Workshop on Adaptable, Reliable, and Responsible Learning (ARRL) </a></u>.
-
+                                href="https://wi-lab.com/cyberchair/2025/icdm25/scripts/submit.php?subarea=S45">International
+                                Workshop on Adaptable, Reliable, and Responsible Learning (ARRL)</a></u>.
                     </p>
 
                     <p class="lead" style="text-align:justify">
-
                         Paper submissions should be limited to a maximum of 8 pages, and follow the IEEE ICDM format.
                         More detailed information is available in the <u><a style="color:black"
                                 href="http://icdm2026.neu.edu.cn/11666/list.htm">IEEE ICDM 2026
                                 Submission Guidelines</a></u>.
-
                     </p>
 
                     <p class="lead" style="text-align:justify">
@@ -253,395 +392,250 @@
                         Therefore, papers must not have been accepted for publication elsewhere or be under review for
                         another workshop, conferences or
                         journals.
-
                     </p>
+
                     <p class="lead" style="text-align:justify">
-                        All accepted papers, including workshops, must have at least one “FULL” registration.
-                        A full registration is either a “member” or “non-member” registration. Student registrations are
+                        All accepted papers, including workshops, must have at least one "FULL" registration.
+                        A full registration is either a "member" or "non-member" registration. Student registrations are
                         not considered full registrations.
                         All authors are required to register by 15th October 2026.
-
                     </p>
-                    <!-- <p class="lead" style="text-align:justify"><u><a style="color:black" href="https://icdm22.cse.usf.edu/registration.html">https://icdm22.cse.usf.edu/registration.html</a></u></p> -->
 
                     <p class="lead" style="text-align:justify">
                         For registration queries please contact: registration@computer.org
                     </p>
-                    <!--                      <li><b>Workshop website:</b> We will create a workshop website, which includes call-for-papers-->
-                    <!--                        and detailed instructions for paper preparation, submission etc. The website will also-->
-                    <!--                        serve as the main information hub to publish workshop programs and other logistic-->
-                    <!--                        information.</li>-->
-                    <!--                      <br/>-->
-                    <!--                      <li><b>Mailing list:</b> The workshop organizers will publish call for workshop papers through-->
-                    <!--                        different mailing list, such as UAI mailing list, machine learning mailing list etc. This-->
-                    <!--                        will reach out to specific author groups to draw their attention for submission.</li>-->
-                    <!--                      <br/>-->
-                    <!--                      <li><b>Social media and other personal site:</b> We will also publish call for papers through social-->
-                    <!--                        media site, such as LinkedIn, twitter etc.,</li>-->
-                    <!--                      <br/>-->
-                    <!--                      <li><b>Invited submissions:</b> The workshop organizers will also send out invitations to a small-->
-                    <!--                        number of researchers to invite them to submit their recent work to the workshop.</li>-->
-
-                </ul>
-
-
+                </div>
 
             </div>
         </div>
     </section>
 
-
-   <section class="bg-light page-section" id="schedule">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">PROGRAM</h2>
+    <!-- Program -->
+    <section class="bg-light page-section" id="schedule">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">PROGRAM</h2>
+                </div>
+            </div>
+            <hr class="divider my-4" />
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12 col-12 text-center">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover white">
+                            <tbody>
+                                <tr>
+                                    <td style="vertical-align: middle; background-color: #d3d3d3;">
+                                        Time (EST)</td>
+                                    <td style="vertical-align: middle; background-color: #d3d3d3;">Title</td>
+                                    <td style="vertical-align: middle; background-color: #d3d3d3;">Presenter/Author</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: center; margin-top: 15px;"><em>All times in local time of Shenyang, China (UTC +8).</em></p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <p class="lead" style="text-align:justify">
-            <div class="container">
-                <hr class="divider my-4" />
-                <div class="row">
-                    <div class="col-lg-10 col-md-6 text-center">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover white">
-                                <tbody>
-                                    <tr>
-                                        <td style="vertical-align: middle; white-space: nowrap; background-color: #d3d3d3;">
-                                            Time (EST)</td>
-                                        <td style="vertical-align: middle; background-color: #d3d3d3;">Title</td>
-                                        <td style="vertical-align: middle; background-color: #d3d3d3;">Presenter/Author</td>
-                                    </tr>
-                    
-                                </tbody>
-                            </table>
-                        </div>
-                        <p style="text-align: center; margin-top: 15px;"><em>All times in local time of Shenyang, China (UTC +8).</em></p>
+    </section>
+
+    <!-- Invited Talk -->
+    <section class="bg-light page-section" id="keynote-talk">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">INVITED TALK</h2>
+                    <hr class="divider my-4" style="width: 10%; border-top: 2px solid #b0765b;" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Chairs -->
+    <section class="bg-light page-section" id="organizers">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">WORKSHOP CHAIRS</h2>
+                    <hr class="divider my-4" />
+                </div>
+            </div>
+
+            <div class="flex-container">
+
+                <div class="flex-item" data-animation-delay="200">
+                    <a href="https://charliezhaoyinpeng.github.io/homepage/" target="_blank">
+                        <img class="img-responsive img-rounded"
+                             src="img/zhaochen.jpg"
+                             alt="Chen Zhao">
+                    </a>
+                    <a class="chair-name"
+                       href="https://charliezhaoyinpeng.github.io/homepage/"
+                       target="_blank">
+                        Chen Zhao
+                    </a>
+                </div>
+
+                <div class="flex-item" data-animation-delay="200">
+                    <a href="https://yhe15.people.wm.edu/" target="_blank">
+                        <img class="img-responsive img-rounded"
+                             src="img/Yi He_v2.png"
+                             alt="Yi He">
+                    </a>
+                    <a class="chair-name"
+                       href="https://yhe15.people.wm.edu/"
+                       target="_blank">
+                        Yi He
+                    </a>
+                </div>
+
+                <div class="flex-item" data-animation-delay="200">
+                    <a href="https://www.fau.edu/engineering/directory/faculty/zhu/" target="_blank">
+                        <img class="img-responsive img-rounded"
+                             src="img/Xingquan Zhu.png"
+                             alt="Xingquan Zhu">
+                    </a>
+                    <a class="chair-name"
+                       href="https://www.fau.edu/engineering/directory/faculty/zhu/"
+                       target="_blank">
+                        Xingquan Zhu
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Chairs -->
+    <section class="bg-light page-section" id="committee">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Program Chairs</h2>
+                    <hr class="divider my-4" />
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div class="person" data-animation-delay="200">
+                    <a href="https://personal.ntu.edu.sg/xlli/" target="blank"><img src="img/Xiaoli Li.png" alt="Xiaoli Li"></a>
+                    <h4 class="section-heading">
+                        <a href="https://personal.ntu.edu.sg/xlli/" target="blank">Xiaoli Li</a>
+                    </h4>
+                </div>
+
+                <div class="person" data-animation-delay="200">
+                    <a href="https://shiruipan.github.io/" target="blank"><img src="img/Shirui Pan.png" alt="Shirui Pan"></a>
+                    <h4 class="section-heading">
+                        <a href="https://shiruipan.github.io/" target="blank">Shirui Pan</a>
+                    </h4>
+                </div>
+
+                <div class="person" data-animation-delay="200">
+                    <a href="https://sites.google.com/view/lusili/?pli=1" target="blank"><img src="img/lusi.jpg" alt="Lusi Li"></a>
+                    <h4 class="section-heading">
+                        <a href="https://sites.google.com/view/lusili/?pli=1" target="blank">Lusi Li</a>
+                    </h4>
+                </div>
+
+                <div class="person" data-animation-delay="200">
+                    <a href="http://www.cse.yorku.ca/~aan/" target="blank"><img src="img/Aijun An.png" alt="Aijun An"></a>
+                    <h4 class="section-heading">
+                        <a href="http://www.cse.yorku.ca/~aan/" target="blank">Aijun An</a>
+                    </h4>
+                </div>
+
+                <div class="person" data-animation-delay="200">
+                    <a href="https://www.ou.edu/coe/cs/people/gruenwald" target="blank"><img src="img/Le Gruenwald.png" alt="Le Gruenwald"></a>
+                    <h4 class="section-heading">
+                        <a href="https://www.ou.edu/coe/cs/people/gruenwald" target="blank">Le Gruenwald</a>
+                    </h4>
+                </div>
+
+                <div class="person" data-animation-delay="200">
+                    <a href="https://sites.google.com/site/rakinhaider/" target="blank"><img src="img/Chowdhury Mohammad Rakin Haider.png" alt="Rakin Haider"></a>
+                    <h4 class="section-heading">
+                        <a href="https://sites.google.com/site/rakinhaider/" target="blank">C. M. Rakin Haider</a>
+                    </h4>
+                </div>
+
+                <div class="person" data-animation-delay="200">
+                    <a href="https://www.cs.emory.edu/~jyang71/" target="blank"><img src="img/Carl Yang.png" alt="Carl Yang"></a>
+                    <h4 class="section-heading">
+                        <a href="https://www.cs.emory.edu/~jyang71/" target="blank">Carl Yang</a>
+                    </h4>
+                </div>
+
+                <div class="person" data-animation-delay="200">
+                    <a href="https://www.linkedin.com/in/christian-schreckenberger-898a7511a/" target="blank"><img src="img/chris.jpg" alt="Christian Schreckenberger"></a>
+                    <h4 class="section-heading">
+                        <a href="https://www.linkedin.com/in/christian-schreckenberger-898a7511a/" target="blank">Christian Schreckenberger</a>
+                    </h4>
+                </div>
+
+                <div class="person" data-animation-delay="200">
+                    <a href="https://www.linkedin.com/in/sascha-marton-a19630185/" target="blank"><img src="img/sascha.jpg" alt="Sascha Marton"></a>
+                    <h4 class="section-heading">
+                        <a href="https://www.linkedin.com/in/sascha-marton-a19630185/" target="blank">Sascha Marton</a>
+                    </h4>
+                </div>
+
+                <div class="person" data-animation-delay="200">
+                    <a href="https://researchdirectory.uc.edu/p/wang2te" target="blank"><img src="img/taige.jpg" alt="Taige Wang"></a>
+                    <h4 class="section-heading">
+                        <a href="https://researchdirectory.uc.edu/p/wang2te" target="blank">Taige Wang</a>
+                    </h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="bg-light page-section" id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Contact information</h2>
+                    <hr class="divider my-4" />
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <b>Chen Zhao</b><br />
+                        Assistant Professor<br />
+                        School of Engineering and Computer Science<br />
+                        Baylor University<br />
+                        E-mail: <u><a href="mailto:chen_zhao@baylor.edu">chen_zhao@baylor.edu</a></u><br />
+                        Webpage: <u><a href="https://charliezhaoyinpeng.github.io/homepage/">Homepage</a></u>
+                    </div>
+
+                    <div class="contact-item">
+                        <b>Yi He</b><br />
+                        Assistant Professor<br />
+                        School of Data Science<br />
+                        William & Mary<br />
+                        E-mail: <u><a href="mailto:yihe@wm.edu">yihe@wm.edu</a></u><br />
+                        Webpage: <u><a href="https://yhe15.people.wm.edu/">Homepage</a></u>
+                    </div>
+
+                    <div class="contact-item">
+                        <b>Xingquan Zhu</b><br />
+                        Professor<br />
+                        Dept. of Electrical Engineering and Computer Science<br />
+                        Florida Atlantic University<br />
+                        E-mail: <u><a href="mailto:xzhu3@fau.edu">xzhu3@fau.edu</a></u><br />
+                        Webpage: <u><a href="https://www.fau.edu/engineering/directory/faculty/zhu/">Homepage</a></u>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-    
-    <section class="bg-light page-section" id="keynote-talk">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">INVITED TALK</h2>
-                <hr class="divider my-4" style="width: 10%; border-top: 2px solid #b0765b;" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-            </div>
-        </div>
-    </div>
-</section>
-
-    
-
-                <!-- Team -->
-<section class="bg-light page-section" id="organizers">
-        <style>
-    .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px;
-    }
-
-    .flex-item {
-        width: 250px;
-        text-align: center;
-    }
-
-    .flex-item img {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        object-position: top;
-    }
-
-    .chair-name {
-        display: block;
-        width: 100%;
-        margin-top: 15px;
-        text-align: center;
-        color: black;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1.3rem;
-    }
-
-    .chair-name:hover {
-        color: #555;
-        text-decoration: none;
-    }
-</style>
-
-<section class="bg-light page-section" id="organizers">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">WORKSHOP CHAIRS</h2>
-                <hr class="divider my-4" />
-            </div>
-        </div>
-
-        <div class="flex-container">
-
-            <div class="flex-item" data-animation-delay="200">
-                <a href="https://charliezhaoyinpeng.github.io/homepage/" target="_blank">
-                    <img class="img-responsive img-rounded"
-                         src="img/zhaochen.jpg"
-                         alt="Chen Zhao">
-                </a>
-
-                <a class="chair-name"
-                   href="https://charliezhaoyinpeng.github.io/homepage/"
-                   target="_blank">
-                    Chen Zhao
-                </a>
-            </div>
-
-            <div class="flex-item" data-animation-delay="200">
-                <a href="https://yhe15.people.wm.edu/" target="_blank">
-                    <img class="img-responsive img-rounded"
-                         src="img/Yi He_v2.png"
-                         alt="Yi He">
-                </a>
-
-                <a class="chair-name"
-                   href="https://yhe15.people.wm.edu/"
-                   target="_blank">
-                    Yi He
-                </a>
-            </div>
-
-            <div class="flex-item" data-animation-delay="200">
-                <a href="https://www.fau.edu/engineering/directory/faculty/zhu/" target="_blank">
-                    <img class="img-responsive img-rounded"
-                         src="img/Xingquan Zhu.png"
-                         alt="Xingquan Zhu">
-                </a>
-
-                <a class="chair-name"
-                   href="https://www.fau.edu/engineering/directory/faculty/zhu/"
-                   target="_blank">
-                    Xingquan Zhu
-                </a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<!-- committee -->
-<section class="bg-light page-section" id="committee">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Program Chairs</h2>
-                <hr class="divider my-4" />
-            </div>
-        </div>
-        <style>
-           .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-            .person {
-                text-align: center;
-            }
-
-            .person img {
-                border-radius: 50%;
-                height: 150px;
-                width: 150px;
-            }
-
-            .section-heading a {
-                text-decoration: none;
-                color: black;
-            }
-        </style>
-
-        <div class="grid-container">
-    <div class="person" data-animation-delay="200">
-        <a href="https://personal.ntu.edu.sg/xlli/" target="blank"><img src="img/Xiaoli Li.png" alt="Xiaoli Li"></a>
-        <h4 class="section-heading">
-            <a href="https://personal.ntu.edu.sg/xlli/" target="blank">Xiaoli Li</a>
-        </h4>
-    </div>
-
-    <div class="person" data-animation-delay="200">
-        <a href="https://shiruipan.github.io/" target="blank"><img src="img/Shirui Pan.png" alt="Shirui Pan"></a>
-        <h4 class="section-heading">
-            <a href="https://shiruipan.github.io/" target="blank">Shirui Pan</a>
-        </h4>
-    </div>
-
-    <div class="person" data-animation-delay="200">
-        <a href="https://sites.google.com/view/lusili/?pli=1" target="blank"><img src="img/lusi.jpg" alt="Lusi Li"></a>
-        <h4 class="section-heading">
-            <a href="https://sites.google.com/view/lusili/?pli=1" target="blank">Lusi Li</a>
-        </h4>
-    </div>
-
-    <div class="person" data-animation-delay="200">
-        <a href="http://www.cse.yorku.ca/~aan/" target="blank"><img src="img/Aijun An.png" alt="Aijun An"></a>
-        <h4 class="section-heading">
-            <a href="http://www.cse.yorku.ca/~aan/" target="blank">Aijun An</a>
-        </h4>
-    </div>
-
-    <div class="person" data-animation-delay="200">
-        <a href="https://www.ou.edu/coe/cs/people/gruenwald" target="blank"><img src="img/Le Gruenwald.png" alt="Le Gruenwald"></a>
-        <h4 class="section-heading">
-            <a href="https://www.ou.edu/coe/cs/people/gruenwald" target="blank">Le Gruenwald</a>
-        </h4>
-    </div>
-
-    <div class="person" data-animation-delay="200">
-        <a href="https://sites.google.com/site/rakinhaider/" target="blank"><img src="img/Chowdhury Mohammad Rakin Haider.png" alt="Rakin Haider"></a>
-        <h4 class="section-heading">
-            <a href="https://sites.google.com/site/rakinhaider/" target="blank">C. M. Rakin Haider</a>
-        </h4>
-    </div>
-
-    <div class="person" data-animation-delay="200">
-        <a href="https://www.cs.emory.edu/~jyang71/" target="blank"><img src="img/Carl Yang.png" alt="Carl Yang"></a>
-        <h4 class="section-heading">
-            <a href="https://www.cs.emory.edu/~jyang71/" target="blank">Carl Yang</a>
-        </h4>
-    </div>
-
-    <div class="person" data-animation-delay="200">
-        <a href="https://www.linkedin.com/in/christian-schreckenberger-898a7511a/" target="blank"><img src="img/chris.jpg" alt="Christian Schreckenberger"></a>
-        <h4 class="section-heading">
-            <a href="https://www.linkedin.com/in/christian-schreckenberger-898a7511a/" target="blank">Christian Schreckenberger</a>
-        </h4>
-    </div>
-
-    <div class="person" data-animation-delay="200">
-        <a href="https://www.linkedin.com/in/sascha-marton-a19630185/" target="blank"><img src="img/sascha.jpg" alt="Sascha Marton"></a>
-        <h4 class="section-heading">
-        <a href="https://www.linkedin.com/in/sascha-marton-a19630185/" target="blank">Sascha Marton</a>
-    </h4>
-    </div>
-
-    <div class="person" data-animation-delay="200">
-    <a href="https://researchdirectory.uc.edu/p/wang2te" target="blank"><img src="img/taige.jpg" alt="Taige Wang">
-    </a>
-    <h4 class="section-heading">
-        <a href="https://researchdirectory.uc.edu/p/wang2te" target="blank">
-            Taige Wang
-        </a>
-    </h4>
-</div>
-            
-</div>
-    </div>
-</section>
-
-
-
-
-<section class="bg-light page-section" id="contacts">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Contact information</h2>
-                <hr class="divider my-4" />
-            </div>
-
-            <style>
-                .contact-info {
-                    display: flex;
-                    justify-content: space-between;
-                    gap: 20px;
-                    color: black;
-                    flex-wrap: wrap; /* 确保在小屏幕上换行 */
-                }
-
-                .contact-item {
-                    text-align: left;
-                    padding: 10px;
-                    border: 1px solid #ddd;
-                    border-radius: 8px;
-                    background-color: #f9f9f9;
-                    flex: 1; /* 使所有项目等宽 */
-                    margin: 10px; /* 确保有一定的间距 */
-                    min-width: 250px; /* 控制最小宽度，防止过窄 */
-                }
-
-                .contact-item a {
-                    color: black;
-                }
-
-                .contact-item b {
-                    font-size: 1.2em;
-                }
-            </style>
-
-            <div class="contact-info">
-                <div class="contact-item">
-                    <b>Chen Zhao</b><br />
-                    Assistant Professor<br />
-                    School of Engineering and Computer Science<br />
-                    Baylor University<br />
-                    E-mail: <u><a href="mailto:chen_zhao@baylor.edu">chen_zhao@baylor.edu</a></u><br />
-                    Webpage: <u><a href="https://charliezhaoyinpeng.github.io/homepage/">Homepage</a></u>
-                </div>
-
-                <div class="contact-item">
-                    <b>Yi He</b><br />
-                    Assistant Professor<br />
-                    School of Data Science<br />
-                    William & Mary<br />
-                    E-mail: <u><a href="mailto:yihe@wm.edu">yihe@wm.edu</a></u><br />
-                    Webpage: <u><a href="https://yhe15.people.wm.edu/">Homepage</a></u>
-                </div>
-
-                <div class="contact-item">
-                    <b>Xingquan Zhu</b><br />
-                    Professor<br />
-                    Dept. of Electrical Engineering and Computer Science<br />
-                    Florida Atlantic University<br />
-                    E-mail: <u><a href="mailto:xzhu3@fau.edu">xzhu3@fau.edu</a></u><br />
-                    Webpage: <u><a href="https://www.fau.edu/engineering/directory/faculty/zhu/">Homepage</a></u>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+    </section>
 
     <!-- Bootstrap core JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
