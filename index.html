@@ -1,28 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>ARRL 2026 workshop</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="dist/assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
-        rel="stylesheet" type="text/css" />
-    <!-- Third party plugin CSS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-        rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="dist/css/styles.css" rel="stylesheet" />
-
-    <!-- Custom responsive overrides (consolidated) -->
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<title>ARRL 2026 workshop</title>
+<!-- Favicon-->
+<link href="dist/assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<!-- Font Awesome icons (free version)-->
+<script crossorigin="anonymous" src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css"/>
+<!-- Third party plugin CSS-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet"/>
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="dist/css/styles.css" rel="stylesheet"/>
+<!-- Custom responsive overrides (consolidated) -->
+<style>
         /* ---------- Masthead ---------- */
         .masthead h1 {
             font-size: clamp(1.5rem, 5vw, 3rem);
@@ -169,54 +166,58 @@
             height: auto;
         }
     </style>
-</head>
-
+<style>
+/* Demo notice and section spacing */
+#Introduction { padding-bottom: 2rem !important; }
+#demos { padding: 50px 0 0; }
+#demos h3 { font-size: 1.6rem; line-height: 1.6; margin: 0; }
+#demos a { color: #000; text-decoration: underline; text-underline-offset: 4px; }
+#demos a:hover { color: #000; text-decoration: underline; }
+#demos .demo-lead { color: red; font-weight: bold; }
+#Dates { padding-top: 8rem; }
+@media (max-width: 576px) { #demos h3 { font-size: 1.25rem; } }
+</style></head>
 <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">ARRL</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Dates">Key Dates</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#submission">Submission</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#schedule">Program</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#organizers">Committee</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Masthead-->
-    <header class="masthead">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-12 align-self-end">
-                    <h1 class="text-white font-weight-bold"><b>International Workshop on Adaptable, Reliable, and
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+<div class="container">
+<a class="navbar-brand js-scroll-trigger" href="#page-top">ARRL</a>
+<button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto my-2 my-lg-0">
+<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Dates">Key Dates</a></li>
+<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#submission">Submission</a></li>
+<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#schedule">Program</a></li>
+<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#organizers">Committee</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Masthead-->
+<header class="masthead">
+<div class="container h-100">
+<div class="row h-100 align-items-center justify-content-center text-center">
+<div class="col-lg-12 align-self-end">
+<h1 class="text-white font-weight-bold"><b>International Workshop on Adaptable, Reliable, and
                             Responsible Learning (ARRL)</b></h1>
-                    <hr class="divider my-4" />
-                </div>
-                <div class="col-lg-12 align-self-baseline">
-                    <p><a class="masthead-link" href="http://icdm2026.neu.edu.cn/main.htm"
-                            target="_blank">Co-located with IEEE ICDM 2026</a>.
+<hr class="divider my-4"/>
+</div>
+<div class="col-lg-12 align-self-baseline">
+<p><a class="masthead-link" href="http://icdm2026.neu.edu.cn/main.htm" target="_blank">Co-located with IEEE ICDM 2026</a>.
                     <p class="text-white-75 font-weight-light mb-5">November 12-15, Shenyang, China</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Introduction-->
-    <section class="page-section" id="Introduction">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-heading text-uppercase"> </h2>
-                    <hr class="divider my-4" />
-                </div>
-                <p class="lead" style="text-align:justify">For years, machine learning has advanced artificial
+</p></div>
+</div>
+</div>
+</header>
+<!-- Introduction-->
+<section class="page-section" id="Introduction">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8 text-center">
+<h2 class="section-heading text-uppercase"> </h2>
+<hr class="divider my-4"/>
+</div>
+<p class="lead" style="text-align:justify">For years, machine learning has advanced artificial
                     intelligence (AI) by enabling the development of systems that generate models from various databases
                     without explicit instruction. The growing availability of data across various fields has led to the
                     proliferation of learning-enabled systems, which embed machine learning components in the core, that
@@ -227,512 +228,404 @@
                     systems into real-world decision-making contexts thus can pose risks, primarily due to their limited
                     adaptability, reliability, and responsibility in dealing with unfamiliar or unknown circumstances.
                 </p>
-
-                <p class="lead" style="text-align:justify">The 4th International Workshop on Adaptable, Reliable,
+<p class="lead" style="text-align:justify">The 4th International Workshop on Adaptable, Reliable,
                     and Responsible Learning (ARRL) aims to gather researchers and practitioners to present recent
                     advancements in addressing the three key aspects of learning within the context of data-driven and
                     data-centric systems: adaptability, reliability, and responsibility. The workshop will explore
                     theoretical foundations, algorithm designs, and frameworks that ensure future learning-enabled
                     systems are
                 </p>
-
-                <p class="lead" style="text-align:justify">
+<p class="lead" style="text-align:justify">
                     1) *Adaptable*, by exhibiting evolvability with changes in the environment, societal dynamics, and
                     task objectives or requirements, ensuring that the system remains relevant and effective in
                     addressing diverse and dynamic challenges while maintaining high-performance standards;
                 </p>
-
-                <p class="lead" style="text-align:justify">
+<p class="lead" style="text-align:justify">
                     2) *Reliable*, by demonstrating robustness and stability in the presence of uncertainty,
                     variability, and unknown unknowns, ensuring system safety and performance consistency across diverse
                     conditions and high-stakes operating environments; and
                 </p>
-
-                <p class="lead" style="text-align:justify">
+<p class="lead" style="text-align:justify">
                     3) *Responsible*, by promoting sustainability, fairness, explainability, and trustworthiness in
                     learning processes and outcomes, addressing ethical and privacy concerns and championing technology
                     use for positive societal impact including solutions for affordable clean energy and climate action.
                 </p>
-
-                <p class="lead" style="text-align:justify">This workshop cordially invites submissions that showcase
+<p class="lead" style="text-align:justify">This workshop cordially invites submissions that showcase
                     cutting-edge advances in research and development of adaptable, reliable, and responsible (ARR)
                     learning algorithms and designs, as well as
                     late-breaking research that introduces published work or software that address ARR challenges and
                     provide significant value to the community.
                 </p>
-                <p class="lead" style="text-align:justify">
+<p class="lead" style="text-align:justify">
                     Past Events: Held on
                     <a href="https://arrl-icdm.github.io/arrl2023/" target="_blank">ARRL 2023 (Shanghai, China)</a>,
                     <a href="https://arrl-icdm.github.io/arrl2024/" target="_blank">ARRL 2024 (Abu Dhabi, UAE)</a> and
                     <a href="https://arrl-icdm.github.io/arrl2025/" target="_blank">ARRL 2025 (Washington DC, USA)</a>.
                 </p>
-            </div>
-        </div>
-    </section>
-    
-
-
-<!-- Adjust spacing -->
-<style>
-    #Introduction {
-        padding-bottom: 2rem !important;
-    }
-
-    #demos {
-    padding: 50px 0 0;
-}
-
-    
-/* Call for Demos spacing */
-#demos {
-    padding: 50px 0 45px;
-}
-
-#demos h3 {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-#demos a {
-    color: black;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-#demos a:hover {
-    text-decoration: underline;
-}
-
-/* Important Dates spacing */
-#Dates {
-    padding-top: 8rem;
-}
-
-    @media (max-width: 576px) {
-        #demos h3 {
-            font-size: 1.25rem;
-        }
-    }
-</style>
-
-<!-- Call for Demos -->
+</div>
+</div>
+</section>
+<!-- Dates-->
 <section id="demos">
-    <div class="container text-center">
-        <h3>
-            <a href="https://icdm2026arrlchallenge.github.io/"
-               target="_blank"
-               rel="noopener noreferrer">
-                <span style="color: red; font-weight: bold;">
-                    Call for Challenge:
-                </span>
-                Adaptive and Reliable Open-World
-                Social Dynamics Discovery
-            </a>
-        </h3>
-    </div>
+<div class="container text-center">
+<h3>
+<a href="https://icdm2026arrlchallenge.github.io/" rel="noopener noreferrer" target="_blank"><span class="demo-lead">Call for demos:</span> Challenge on Adaptive and Reliable Open-World Social Dynamics Discovery</a>
+</h3>
+</div>
+</section><section class="page-section" id="Dates">
+<div class="container">
+<h2 class="text-center mt-0">IMPORTANT DATES</h2>
+<hr class="divider my-4"/>
+<div class="row justify-content-center">
+<div class="col-lg-10 col-md-10 col-sm-12 col-12 text-center">
+<div class="table-responsive">
+<table class="table table-bordered table-hover white mb-0">
+<tbody>
+<tr>
+<td>August 20<sup>th</sup>, 2026</td>
+<td>Papers Submission</td>
+</tr>
+<tr>
+<td>September 18<sup>th</sup>, 2026</td>
+<td>Author Notification</td>
+</tr>
+<tr>
+<td>October 5<sup>th</sup>, 2026</td>
+<td>Camera-ready and Copyright forms</td>
+</tr>
+<tr>
+<td>November 15<sup>th</sup>, 2026</td>
+<td>Workshop Date</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="text-muted mt-2">
+<small>All deadlines are due 11:59 pm Anywhere on Earth (AOE).</small>
+</p>
+</div>
+</div>
+</div>
 </section>
-
-<!-- Dates -->
-<section class="page-section" id="Dates">
-    <div class="container">
-        <h2 class="text-center mt-0">IMPORTANT DATES</h2>
-        <hr class="divider my-4" />
-
-        <div class="row justify-content-center">
-            <div class="col-lg-10 col-md-10 col-sm-12 col-12 text-center">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover white mb-0">
-                        <tbody>
-                            <tr>
-                                <td>August 20<sup>th</sup>, 2026</td>
-                                <td>Papers Submission</td>
-                            </tr>
-                            <tr>
-                                <td>September 18<sup>th</sup>, 2026</td>
-                                <td>Author Notification</td>
-                            </tr>
-                            <tr>
-                                <td>October 5<sup>th</sup>, 2026</td>
-                                <td>Camera-ready and Copyright forms</td>
-                            </tr>
-                            <tr>
-                                <td>November 12<sup>nd</sup>, 2026</td>
-                                <td>Workshop Date</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p class="text-muted mt-2">
-                    <small>
-                        All deadlines are due 11:59 pm Anywhere on Earth (AOE).
-                    </small>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Topics-->
-    <section class="page-section" id="topics">
-        <div class="container">
-            <h2 class="text-center mt-0">TOPICS</h2>
-            <hr class="divider my-4" />
-            <p class="lead" style="text-align:justify">Theory, methodology, and resource papers are welcome from any of
+<!-- Topics-->
+<section class="page-section" id="topics">
+<div class="container">
+<h2 class="text-center mt-0">TOPICS</h2>
+<hr class="divider my-4"/>
+<p class="lead" style="text-align:justify">Theory, methodology, and resource papers are welcome from any of
                 the following areas, including but not limited to:</p>
-            <br />
-
-            <b>Adaptable Learning</b>
-            <ul class="lead">
-                <li>Online/Incremental Learning</li>
-                <li>Transfer Learning and Domain Adaptation</li>
-                <li>Lifelong/Continual/Meta Learning</li>
-                <li>Learning from Heterogeneous and Multi-Modal Data</li>
-                <li>Knowledge Discovery from Multiple Databases</li>
-                <li>Learning with Rejection/Abstention</li>
-                <li>Cross-Domain Data Mining</li>
-                <li>Evolving Data Stream Mining</li>
-                <li>Ensemble Learning in Dynamic Environments</li>
-            </ul>
-
-
-            <b>Reliable Learning</b>
-            <ul class="lead">
-                <li>Robustness and Generalization in Data Mining</li>
-                <li>Trustworthiness in Learning-enabled Systems</li>
-                <li>Noise Handling and Outlier/Anomaly Detection</li>
-                <li>Data Wrangling and Munging for Reliable Preprocessing</li>
-                <li>Data Quality Assessment and Assurance</li>
-                <li>Robustness in Graph and Network Mining</li>
-                <li>Uncertainty Quantification and Confidence Estimation in Learning-enabled Systems</li>
-                <li>Learning with Very Few Examples</li>
-                <li>Open-World Learning (Learning in Unexpected/Unknown Environments)</li>
-            </ul>
-
-
-            <b>Responsible Learning</b>
-            <ul class="lead">
-                <li>Explainable Learning Modules and Architectures</li>
-                <li>Interpretability of Learning Results</li>
-                <li>Algorithmic Fairness in Data Mining</li>
-                <li>Discrimination-aware Data Mining</li>
-                <li>Privacy-Preserving Data Mining</li>
-                <li>Ethical Data Mining and Data Usage</li>
-                <li>Socio-technical Aspects of Data Mining</li>
-                <li>Bias Detection and Mitigation in Learning-enabled Systems</li>
-                <li>AI for Environmental and Social Sustainability</li>
-                <li>Data Mining for Energy Efficiency and Climate Action</li>
-            </ul>
-
-        </div>
-    </section>
-
-    <!-- Submission -->
-    <section class="page-section" id="submission">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">SUBMISSION AND PUBLICATION</h2>
-                    <hr class="divider my-4" />
-                </div>
-
-                <div class="col-lg-12 submission-content">
-                    <p class="lead" style="text-align:justify">
-                        Paper submission link: <u><a style="color:black"
-                                href="https://wi-lab.com/cyberchair/2026/icdm26/scripts/submit.php?subarea=S16&undisplay_detail=1&wh=/cyberchair/2026/icdm26/scripts/ws_submit.php">International
+<br/>
+<b>Adaptable Learning</b>
+<ul class="lead">
+<li>Online/Incremental Learning</li>
+<li>Transfer Learning and Domain Adaptation</li>
+<li>Lifelong/Continual/Meta Learning</li>
+<li>Learning from Heterogeneous and Multi-Modal Data</li>
+<li>Knowledge Discovery from Multiple Databases</li>
+<li>Learning with Rejection/Abstention</li>
+<li>Cross-Domain Data Mining</li>
+<li>Evolving Data Stream Mining</li>
+<li>Ensemble Learning in Dynamic Environments</li>
+</ul>
+<b>Reliable Learning</b>
+<ul class="lead">
+<li>Robustness and Generalization in Data Mining</li>
+<li>Trustworthiness in Learning-enabled Systems</li>
+<li>Noise Handling and Outlier/Anomaly Detection</li>
+<li>Data Wrangling and Munging for Reliable Preprocessing</li>
+<li>Data Quality Assessment and Assurance</li>
+<li>Robustness in Graph and Network Mining</li>
+<li>Uncertainty Quantification and Confidence Estimation in Learning-enabled Systems</li>
+<li>Learning with Very Few Examples</li>
+<li>Open-World Learning (Learning in Unexpected/Unknown Environments)</li>
+</ul>
+<b>Responsible Learning</b>
+<ul class="lead">
+<li>Explainable Learning Modules and Architectures</li>
+<li>Interpretability of Learning Results</li>
+<li>Algorithmic Fairness in Data Mining</li>
+<li>Discrimination-aware Data Mining</li>
+<li>Privacy-Preserving Data Mining</li>
+<li>Ethical Data Mining and Data Usage</li>
+<li>Socio-technical Aspects of Data Mining</li>
+<li>Bias Detection and Mitigation in Learning-enabled Systems</li>
+<li>AI for Environmental and Social Sustainability</li>
+<li>Data Mining for Energy Efficiency and Climate Action</li>
+</ul>
+</div>
+</section>
+<!-- Submission -->
+<section class="page-section" id="submission">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading text-uppercase">SUBMISSION AND PUBLICATION</h2>
+<hr class="divider my-4"/>
+</div>
+<div class="col-lg-12 submission-content">
+<p class="lead" style="text-align:justify">
+                        Paper submission link: <u><a href="https://wi-lab.com/cyberchair/2026/icdm26/scripts/submit.php?subarea=S16&amp;undisplay_detail=1&amp;wh=/cyberchair/2026/icdm26/scripts/ws_submit.php" style="color:black">International
                                 Workshop on Adaptable, Reliable, and Responsible Learning (ARRL)</a></u>.
                     </p>
-
-                    <p class="lead" style="text-align:justify">
+<p class="lead" style="text-align:justify">
                         Paper submissions should be limited to a maximum of 8 pages, and follow the IEEE ICDM format.
-                        More detailed information is available in the <u><a style="color:black"
-                                href="http://icdm2026.neu.edu.cn/11666/list.htm">IEEE ICDM 2026
+                        More detailed information is available in the <u><a href="http://icdm2026.neu.edu.cn/11666/list.htm" style="color:black">IEEE ICDM 2026
                                 Submission Guidelines</a></u>.
                     </p>
-
-                    <p class="lead" style="text-align:justify">
+<p class="lead" style="text-align:justify">
                         All accepted papers will be included in the ICDM'26 Workshop Proceedings (ICDMW 2026) published
                         by the IEEE Computer Society Press.
                         Therefore, papers must not have been accepted for publication elsewhere or be under review for
                         another workshop, conferences or
                         journals.
                     </p>
-
-                    <p class="lead" style="text-align:justify">
+<p class="lead" style="text-align:justify">
                         All accepted papers, including workshops, must have at least one "FULL" registration.
                         A full registration is either a "member" or "non-member" registration. Student registrations are
                         not considered full registrations.
                         All authors are required to register by 15th October 2026.
                     </p>
-
-                    <p class="lead" style="text-align:justify">
+<p class="lead" style="text-align:justify">
                         For registration queries please contact: registration@computer.org
                     </p>
-                </div>
-
+</div>
+</div>
+</div>
+</section>
+<!-- Program -->
+<section class="bg-light page-section" id="schedule">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">PROGRAM</h2>
             </div>
         </div>
-    </section>
-
-    <!-- Program -->
-    <section class="bg-light page-section" id="schedule">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">PROGRAM</h2>
+        <hr class="divider my-4" />
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12 col-12 text-center">
+                <p class="lead mb-3"><strong>Sunday, November 15, 2026 — Workshop W29 (ARRL)</strong></p>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover white">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="vertical-align: middle; background-color: #d3d3d3;">Time (UTC+8)</th>
+                                <th scope="col" style="vertical-align: middle; background-color: #d3d3d3;">Program</th>
+                                <th scope="col" style="vertical-align: middle; background-color: #d3d3d3;">Venue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>13:30–15:30</td>
+                                <td>ARRL Workshop (W29)</td>
+                                <td>Grand Ballroom 2</td>
+                            </tr>
+                            <tr>
+                                <td>15:30–15:50</td>
+                                <td>Coffee Break</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>15:50–18:00</td>
+                                <td>ARRL Workshop (W29)</td>
+                                <td>Grand Ballroom 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-            <hr class="divider my-4" />
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-12 col-12 text-center">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-hover white">
-                            <tbody>
-                                <tr>
-                                    <td style="vertical-align: middle; background-color: #d3d3d3;">
-                                        Time (EST)</td>
-                                    <td style="vertical-align: middle; background-color: #d3d3d3;">Title</td>
-                                    <td style="vertical-align: middle; background-color: #d3d3d3;">Presenter/Author</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p style="text-align: center; margin-top: 15px;"><em>All times in local time of Shenyang, China (UTC +8).</em></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Invited Talk -->
-    <section class="bg-light page-section" id="keynote-talk">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">INVITED TALK</h2>
-                    <hr class="divider my-4" style="width: 10%; border-top: 2px solid #b0765b;" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                </div>
+                <p style="text-align: center; margin-top: 15px;"><em>All times in local time of Shenyang, China (UTC+8).</em></p>
             </div>
         </div>
-    </section>
-
-    <!-- Workshop Chairs -->
-    <section class="bg-light page-section" id="organizers">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">WORKSHOP CHAIRS</h2>
-                    <hr class="divider my-4" />
-                </div>
-            </div>
-
-            <div class="flex-container">
-
-                <div class="flex-item" data-animation-delay="200">
-                    <a href="https://charliezhaoyinpeng.github.io/homepage/" target="_blank">
-                        <img class="img-responsive img-rounded"
-                             src="img/zhaochen.jpg"
-                             alt="Chen Zhao">
-                    </a>
-                    <a class="chair-name"
-                       href="https://charliezhaoyinpeng.github.io/homepage/"
-                       target="_blank">
+    </div>
+</section>
+<!-- Invited Talk -->
+<section class="bg-light page-section" id="keynote-talk">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading text-uppercase">INVITED TALK</h2>
+<hr class="divider my-4" style="width: 10%; border-top: 2px solid #b0765b;"/>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-10 mx-auto">
+</div>
+</div>
+</div>
+</section>
+<!-- Workshop Chairs -->
+<section class="bg-light page-section" id="organizers">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading text-uppercase">WORKSHOP CHAIRS</h2>
+<hr class="divider my-4"/>
+</div>
+</div>
+<div class="flex-container">
+<div class="flex-item" data-animation-delay="200">
+<a href="https://charliezhaoyinpeng.github.io/homepage/" target="_blank">
+<img alt="Chen Zhao" class="img-responsive img-rounded" src="img/zhaochen.jpg"/>
+</a>
+<a class="chair-name" href="https://charliezhaoyinpeng.github.io/homepage/" target="_blank">
                         Chen Zhao
                     </a>
-                </div>
-
-                <div class="flex-item" data-animation-delay="200">
-                    <a href="https://yhe15.people.wm.edu/" target="_blank">
-                        <img class="img-responsive img-rounded"
-                             src="img/Yi He_v2.png"
-                             alt="Yi He">
-                    </a>
-                    <a class="chair-name"
-                       href="https://yhe15.people.wm.edu/"
-                       target="_blank">
+</div>
+<div class="flex-item" data-animation-delay="200">
+<a href="https://yhe15.people.wm.edu/" target="_blank">
+<img alt="Yi He" class="img-responsive img-rounded" src="img/Yi He_v2.png"/>
+</a>
+<a class="chair-name" href="https://yhe15.people.wm.edu/" target="_blank">
                         Yi He
                     </a>
-                </div>
-
-                <div class="flex-item" data-animation-delay="200">
-                    <a href="https://www.fau.edu/engineering/directory/faculty/zhu/" target="_blank">
-                        <img class="img-responsive img-rounded"
-                             src="img/Xingquan Zhu.png"
-                             alt="Xingquan Zhu">
-                    </a>
-                    <a class="chair-name"
-                       href="https://www.fau.edu/engineering/directory/faculty/zhu/"
-                       target="_blank">
+</div>
+<div class="flex-item" data-animation-delay="200">
+<a href="https://www.fau.edu/engineering/directory/faculty/zhu/" target="_blank">
+<img alt="Xingquan Zhu" class="img-responsive img-rounded" src="img/Xingquan Zhu.png"/>
+</a>
+<a class="chair-name" href="https://www.fau.edu/engineering/directory/faculty/zhu/" target="_blank">
                         Xingquan Zhu
                     </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Program Chairs -->
-    <section class="bg-light page-section" id="committee">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Program Chairs</h2>
-                    <hr class="divider my-4" />
-                </div>
-            </div>
-
-            <div class="grid-container">
-                <div class="person" data-animation-delay="200">
-                    <a href="https://personal.ntu.edu.sg/xlli/" target="blank"><img src="img/Xiaoli Li.png" alt="Xiaoli Li"></a>
-                    <h4 class="section-heading">
-                        <a href="https://personal.ntu.edu.sg/xlli/" target="blank">Xiaoli Li</a>
-                    </h4>
-                </div>
-
-                <div class="person" data-animation-delay="200">
-                    <a href="https://shiruipan.github.io/" target="blank"><img src="img/Shirui Pan.png" alt="Shirui Pan"></a>
-                    <h4 class="section-heading">
-                        <a href="https://shiruipan.github.io/" target="blank">Shirui Pan</a>
-                    </h4>
-                </div>
-
-                <div class="person" data-animation-delay="200">
-                    <a href="https://sites.google.com/view/lusili/?pli=1" target="blank"><img src="img/lusi.jpg" alt="Lusi Li"></a>
-                    <h4 class="section-heading">
-                        <a href="https://sites.google.com/view/lusili/?pli=1" target="blank">Lusi Li</a>
-                    </h4>
-                </div>
-
-                <div class="person" data-animation-delay="200">
-                    <a href="http://www.cse.yorku.ca/~aan/" target="blank"><img src="img/Aijun An.png" alt="Aijun An"></a>
-                    <h4 class="section-heading">
-                        <a href="http://www.cse.yorku.ca/~aan/" target="blank">Aijun An</a>
-                    </h4>
-                </div>
-
-                <div class="person" data-animation-delay="200">
-                    <a href="https://www.ou.edu/coe/cs/people/gruenwald" target="blank"><img src="img/Le Gruenwald.png" alt="Le Gruenwald"></a>
-                    <h4 class="section-heading">
-                        <a href="https://www.ou.edu/coe/cs/people/gruenwald" target="blank">Le Gruenwald</a>
-                    </h4>
-                </div>
-
-                <div class="person" data-animation-delay="200">
-                    <a href="https://sites.google.com/site/rakinhaider/" target="blank"><img src="img/Chowdhury Mohammad Rakin Haider.png" alt="Rakin Haider"></a>
-                    <h4 class="section-heading">
-                        <a href="https://sites.google.com/site/rakinhaider/" target="blank">C. M. Rakin Haider</a>
-                    </h4>
-                </div>
-
-                <div class="person" data-animation-delay="200">
-                    <a href="https://www.cs.emory.edu/~jyang71/" target="blank"><img src="img/Carl Yang.png" alt="Carl Yang"></a>
-                    <h4 class="section-heading">
-                        <a href="https://www.cs.emory.edu/~jyang71/" target="blank">Carl Yang</a>
-                    </h4>
-                </div>
-
-                <div class="person" data-animation-delay="200">
-                    <a href="https://www.linkedin.com/in/christian-schreckenberger-898a7511a/" target="blank"><img src="img/chris.jpg" alt="Christian Schreckenberger"></a>
-                    <h4 class="section-heading">
-                        <a href="https://www.linkedin.com/in/christian-schreckenberger-898a7511a/" target="blank">Christian Schreckenberger</a>
-                    </h4>
-                </div>
-
-                <div class="person" data-animation-delay="200">
-                    <a href="https://www.linkedin.com/in/sascha-marton-a19630185/" target="blank"><img src="img/sascha.jpg" alt="Sascha Marton"></a>
-                    <h4 class="section-heading">
-                        <a href="https://www.linkedin.com/in/sascha-marton-a19630185/" target="blank">Sascha Marton</a>
-                    </h4>
-                </div>
-
-                <div class="person" data-animation-delay="200">
-                    <a href="https://researchdirectory.uc.edu/p/wang2te" target="blank"><img src="img/taige.jpg" alt="Taige Wang"></a>
-                    <h4 class="section-heading">
-                        <a href="https://researchdirectory.uc.edu/p/wang2te" target="blank">Taige Wang</a>
-                    </h4>
-                </div>
-
-                <div class="person" data-animation-delay="200">
-                    <a href="https://scholar.google.com/citations?hl=en&user=H33Rmi1kGCgC" target="_blank">
-                        <img src="img/Yingqi.JPG" alt="Yingqi Feng">
-                    </a>
-                    <h4 class="section-heading">
-                        <a href="https://scholar.google.com/citations?hl=en&user=H33Rmi1kGCgC" target="_blank">
+</div>
+</div>
+</div>
+</section>
+<!-- Program Chairs -->
+<section class="bg-light page-section" id="committee">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading text-uppercase">Program Chairs</h2>
+<hr class="divider my-4"/>
+</div>
+</div>
+<div class="grid-container">
+<div class="person" data-animation-delay="200">
+<a href="https://personal.ntu.edu.sg/xlli/" target="blank"><img alt="Xiaoli Li" src="img/Xiaoli Li.png"/></a>
+<h4 class="section-heading">
+<a href="https://personal.ntu.edu.sg/xlli/" target="blank">Xiaoli Li</a>
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="https://shiruipan.github.io/" target="blank"><img alt="Shirui Pan" src="img/Shirui Pan.png"/></a>
+<h4 class="section-heading">
+<a href="https://shiruipan.github.io/" target="blank">Shirui Pan</a>
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="https://sites.google.com/view/lusili/?pli=1" target="blank"><img alt="Lusi Li" src="img/lusi.jpg"/></a>
+<h4 class="section-heading">
+<a href="https://sites.google.com/view/lusili/?pli=1" target="blank">Lusi Li</a>
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="http://www.cse.yorku.ca/~aan/" target="blank"><img alt="Aijun An" src="img/Aijun An.png"/></a>
+<h4 class="section-heading">
+<a href="http://www.cse.yorku.ca/~aan/" target="blank">Aijun An</a>
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="https://www.ou.edu/coe/cs/people/gruenwald" target="blank"><img alt="Le Gruenwald" src="img/Le Gruenwald.png"/></a>
+<h4 class="section-heading">
+<a href="https://www.ou.edu/coe/cs/people/gruenwald" target="blank">Le Gruenwald</a>
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="https://sites.google.com/site/rakinhaider/" target="blank"><img alt="Rakin Haider" src="img/Chowdhury Mohammad Rakin Haider.png"/></a>
+<h4 class="section-heading">
+<a href="https://sites.google.com/site/rakinhaider/" target="blank">C. M. Rakin Haider</a>
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="https://www.cs.emory.edu/~jyang71/" target="blank"><img alt="Carl Yang" src="img/Carl Yang.png"/></a>
+<h4 class="section-heading">
+<a href="https://www.cs.emory.edu/~jyang71/" target="blank">Carl Yang</a>
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="https://www.linkedin.com/in/christian-schreckenberger-898a7511a/" target="blank"><img alt="Christian Schreckenberger" src="img/chris.jpg"/></a>
+<h4 class="section-heading">
+<a href="https://www.linkedin.com/in/christian-schreckenberger-898a7511a/" target="blank">Christian Schreckenberger</a>
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="https://www.linkedin.com/in/sascha-marton-a19630185/" target="blank"><img alt="Sascha Marton" src="img/sascha.jpg"/></a>
+<h4 class="section-heading">
+<a href="https://www.linkedin.com/in/sascha-marton-a19630185/" target="blank">Sascha Marton</a>
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="https://researchdirectory.uc.edu/p/wang2te" target="blank"><img alt="Taige Wang" src="img/taige.jpg"/></a>
+<h4 class="section-heading">
+<a href="https://researchdirectory.uc.edu/p/wang2te" target="blank">Taige Wang</a>
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="https://scholar.google.com/citations?hl=en&amp;user=H33Rmi1kGCgC" target="_blank">
+<img alt="Yingqi Feng" src="img/Yingqi.JPG"/>
+</a>
+<h4 class="section-heading">
+<a href="https://scholar.google.com/citations?hl=en&amp;user=H33Rmi1kGCgC" target="_blank">
                             Yingqi Feng
                         </a>
-                    </h4>
-                </div>
-                
-                <div class="person" data-animation-delay="200">
-                    <a href="https://scholar.google.com/citations?user=WAfnxxAAAAAJ&hl=en&authuser=1" target="_blank">
-                        <img src="img/Leizhen.png" alt="Leizhen Zhang">
-                    </a>
-                    <h4 class="section-heading">
-                        <a href="https://scholar.google.com/citations?user=WAfnxxAAAAAJ&hl=en&authuser=1" target="_blank">
+</h4>
+</div>
+<div class="person" data-animation-delay="200">
+<a href="https://scholar.google.com/citations?user=WAfnxxAAAAAJ&amp;hl=en&amp;authuser=1" target="_blank">
+<img alt="Leizhen Zhang" src="img/Leizhen.png"/>
+</a>
+<h4 class="section-heading">
+<a href="https://scholar.google.com/citations?user=WAfnxxAAAAAJ&amp;hl=en&amp;authuser=1" target="_blank">
                             Leizhen Zhang
                         </a>
-                    </h4>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="bg-light page-section" id="contacts">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase">Contact information</h2>
-                    <hr class="divider my-4" />
-                </div>
-
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <b>Chen Zhao</b><br />
-                        Assistant Professor<br />
-                        School of Engineering and Computer Science<br />
-                        Baylor University<br />
-                        E-mail: <u><a href="mailto:chen_zhao@baylor.edu">chen_zhao@baylor.edu</a></u><br />
+</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="bg-light page-section" id="contacts">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 text-center">
+<h2 class="section-heading text-uppercase">Contact information</h2>
+<hr class="divider my-4"/>
+</div>
+<div class="contact-info">
+<div class="contact-item">
+<b>Chen Zhao</b><br/>
+                        Assistant Professor<br/>
+                        School of Engineering and Computer Science<br/>
+                        Baylor University<br/>
+                        E-mail: <u><a href="mailto:chen_zhao@baylor.edu">chen_zhao@baylor.edu</a></u><br/>
                         Webpage: <u><a href="https://charliezhaoyinpeng.github.io/homepage/">Homepage</a></u>
-                    </div>
-
-                    <div class="contact-item">
-                        <b>Yi He</b><br />
-                        Assistant Professor<br />
-                        School of Data Science<br />
-                        William & Mary<br />
-                        E-mail: <u><a href="mailto:yihe@wm.edu">yihe@wm.edu</a></u><br />
+</div>
+<div class="contact-item">
+<b>Yi He</b><br/>
+                        Assistant Professor<br/>
+                        School of Data Science<br/>
+                        William &amp; Mary<br/>
+                        E-mail: <u><a href="mailto:yihe@wm.edu">yihe@wm.edu</a></u><br/>
                         Webpage: <u><a href="https://yhe15.people.wm.edu/">Homepage</a></u>
-                    </div>
-
-                    <div class="contact-item">
-                        <b>Xingquan Zhu</b><br />
-                        Professor<br />
-                        Dept. of Electrical Engineering and Computer Science<br />
-                        Florida Atlantic University<br />
-                        E-mail: <u><a href="mailto:xzhu3@fau.edu">xzhu3@fau.edu</a></u><br />
+</div>
+<div class="contact-item">
+<b>Xingquan Zhu</b><br/>
+                        Professor<br/>
+                        Dept. of Electrical Engineering and Computer Science<br/>
+                        Florida Atlantic University<br/>
+                        E-mail: <u><a href="mailto:xzhu3@fau.edu">xzhu3@fau.edu</a></u><br/>
                         Webpage: <u><a href="https://www.fau.edu/engineering/directory/faculty/zhu/">Homepage</a></u>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bootstrap core JS-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="dist/js/scripts.js"></script>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bootstrap core JS-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<!-- Core theme JS-->
+<script src="dist/js/scripts.js"></script>
 </body>
-
 </html>
