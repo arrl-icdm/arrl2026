@@ -89,6 +89,27 @@
             object-fit: cover;
             object-position: top;
         }
+        /* Reframe only Guo-Sen Xie's portrait (source has excess space above the face). */
+        .xie-portrait-frame {
+            display: block;
+            width: 200px;
+            height: 200px;
+            max-width: 100%;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #fff;
+        }
+        .flex-item .xie-portrait-frame img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            border-radius: 0;
+            object-fit: cover;
+            object-position: center;
+            transform: translateY(-25px) scale(1.30);
+        }
         .chair-name {
             display: block;
             width: 100%;
@@ -487,7 +508,7 @@
 </div>
     
 <div class="flex-item" data-animation-delay="200">
-    <a href="https://xiepage.github.io/" target="_blank">
+    <a href="https://xiepage.github.io/" target="_blank" class="xie-portrait-frame">
         <img class="img-responsive img-rounded"
              src="img/guosenxie.jpg"
              alt="Guo-Sen Xie">
