@@ -100,16 +100,16 @@
             overflow: hidden;
             background: #fff;
         }
-        
-.flex-item .xie-portrait-frame img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    transform: none;
-}
-
+        .flex-item .xie-portrait-frame img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            border-radius: 0;
+            object-fit: cover;
+            object-position: 50% 18%;
+            transform: scale(1.08);
+        }
         .chair-name {
             display: block;
             width: 100%;
@@ -448,21 +448,21 @@
                         <tbody>
                             <tr><td>13:30–13:35</td><td><strong>Opening Remarks</strong></td><td>—</td></tr>
                             <tr><td>13:35–14:05</td><td><strong>Keynote Talk (Title TBA)</strong></td><td>Speaker TBA</td></tr>
-                            <tr><td>14:05–14:20</td><td>Dynamic Regret for Unconstrained Online Regression via the Follow-the-Leading-History Algorithm with Vovk--Azoury--Warmuth Forecasters<div><small class="text-muted">[Paper S16205]</small></div></td><td>Viacheslav Potapov and Dmitry Rokhlin</td></tr>
-                            <tr><td>14:20–14:35</td><td>One-Shot Domain Calibration of Mixture-of-Experts Routers via Gradient Bias Steering<div><small class="text-muted">[Paper S16207]</small></div></td><td>Marinа Frolova, Ivan Shchukin, Evgeny Bessonnitsyn, Konstantin Pakulnevich, Timur Gabbasov, Aleksandr Ustinov, and Sergey Muravyov</td></tr>
+                            <tr><td>14:05–14:20</td><td>When Do Label-Free LLM Divergence Claims Reproduce? A Reliability Audit over Domain Taxonomies<div><small class="text-muted">[Paper DM1289]</small></div></td><td>Yinan LIU, Tengfei Ma, Weimin Lyu, Xinyu Dong, Xiaojie Fan, Rachel Wong, Richard Rosenthal, Henry Lam, and Fusheng Wang</td></tr>
+                            <tr><td>14:20–14:35</td><td>Does Model Uncertainty Track Human Ambiguity? Evidence from Multi-Annotator Vision Benchmarks<div><small class="text-muted">[Paper S16213]</small></div></td><td>Manya Singh and Arjun Pakrashi</td></tr>
                             <tr><td>14:35–14:50</td><td>Divergence Aware Isolation Forest via Branch Occupancy Distributions<div><small class="text-muted">[Paper S16211]</small></div></td><td>Albert Rachwał, Alicja Rachwał, and Paweł Karczmarek</td></tr>
-                            <tr><td>14:50–15:05</td><td>Adaptive Reasoning with Recursive Decomposition<div><small class="text-muted">[Paper S16212]</small></div></td><td>Jingjun Tang, Limin Yan, Lixing Yu, Kun Yue, and Zhiwen Tang</td></tr>
-                            <tr><td>15:05–15:20</td><td>Does Model Uncertainty Track Human Ambiguity? Evidence from Multi-Annotator Vision Benchmarks<div><small class="text-muted">[Paper S16213]</small></div></td><td>Manya Singh and Arjun Pakrashi</td></tr>
+                            <tr><td>14:50–15:05</td><td>Leakage-Safe Block-Granular Mining of Energy-Drink Survey Data:Stable Behavioural Signatures in a High-Dimensional Questionnaire<div><small class="text-muted">[Paper DM991]</small></div></td><td>Adam Kiersztyn, Paweł Krukow, Krystyna Kiersztyn, Natalia Kupis-Posiej, Kacper Romaniuk, and Andrzej Cudo</td></tr>
+                            <tr><td>15:05–15:20</td><td>Dynamic Regret for Unconstrained Online Regression via the Follow-the-Leading-History Algorithm with Vovk--Azoury--Warmuth Forecasters<div><small class="text-muted">[Paper S16205]</small></div></td><td>Viacheslav Potapov and Dmitry Rokhlin</td></tr>
                             <tr><td>15:20–15:30</td><td>Transition / Buffer</td><td>—</td></tr>
                             <tr style="background-color: #f0f0f0;"><td>15:30–15:50</td><td>Coffee Break</td><td>—</td></tr>
-                            <tr><td>15:50–16:05</td><td>CLIP-CVAE: Attribute-Conditioned Feature Synthesis for Generalized Zero-Shot Learning<div><small class="text-muted">[Paper S16214]</small></div></td><td>Muqaddas Gull, Mubashir Ahmad, Huma Naj, and Samee Ullah Khan</td></tr>
-                            <tr><td>16:05–16:20</td><td>SCOF: Causal Risk Mining and Cost-Aware Intervention for AI Agent Safety<div><small class="text-muted">[Paper S16215]</small></div></td><td>Satyam Mishra, Phung Thao Vi, Anchit Bijalwan, Tan Duc Tran, and Vishwanath Bijalwan</td></tr>
+                            <tr><td>15:50–16:05</td><td>One-Shot Domain Calibration of Mixture-of-Experts Routers via Gradient Bias Steering<div><small class="text-muted">[Paper S16207]</small></div></td><td>Marinа Frolova, Ivan Shchukin, Evgeny Bessonnitsyn, Konstantin Pakulnevich, Timur Gabbasov, Aleksandr Ustinov, and Sergey Muravyov</td></tr>
+                            <tr><td>16:05–16:20</td><td>CLIP-CVAE: Attribute-Conditioned Feature Synthesis for Generalized Zero-Shot Learning<div><small class="text-muted">[Paper S16214]</small></div></td><td>Muqaddas Gull, Mubashir Ahmad, Huma Naj, and Samee Ullah Khan</td></tr>
                             <tr><td>16:20–16:35</td><td>TRACE-LLM: A Replayable and Certificate-Driven Transformation Framework for Domain-Specialized Large Language Models<div><small class="text-muted">[Paper S16216]</small></div></td><td>Kamal Taha</td></tr>
-                            <tr><td>16:35–16:50</td><td>Leakage-Safe Block-Granular Mining of Energy-Drink Survey Data:Stable Behavioural Signatures in a High-Dimensional Questionnaire<div><small class="text-muted">[Paper DM991]</small></div></td><td>Adam Kiersztyn, Paweł Krukow, Krystyna Kiersztyn, Natalia Kupis-Posiej, Kacper Romaniuk, and Andrzej Cudo</td></tr>
+                            <tr><td>16:35–16:50</td><td>SCOF: Causal Risk Mining and Cost-Aware Intervention for AI Agent Safety<div><small class="text-muted">[Paper S16215]</small></div></td><td>Satyam Mishra, Phung Thao Vi, Anchit Bijalwan, Tan Duc Tran, and Vishwanath Bijalwan</td></tr>
                             <tr><td>16:50–17:05</td><td>Mining Multi-Model Failure Patterns for Reliability Auditing of 3D Lung Nodule Malignancy Predictors<div><small class="text-muted">[Paper DM1153]</small></div></td><td>Xin Meng, Xiaopeng Li, Huixin Yu, Yuhong Zhao, and Qing Chang</td></tr>
-                            <tr><td>17:05–17:20</td><td>When Do Label-Free LLM Divergence Claims Reproduce? A Reliability Audit over Domain Taxonomies<div><small class="text-muted">[Paper DM1289]</small></div></td><td>Yinan LIU, Tengfei Ma, Weimin Lyu, Xinyu Dong, Xiaojie Fan, Rachel Wong, Richard Rosenthal, Henry Lam, and Fusheng Wang</td></tr>
-                            <tr><td>17:20–17:35</td><td>KARD: A Knowledge-Anchored Reasoning Distillation Framework for Domain-Specific Small-Scale LLMs via Attraction Basin Regularization<div><small class="text-muted">[Paper M1472]</small></div></td><td>Gen Li, Zhichao Yang, Yuanze Hu, Ye Qiu, Xinyu Wang, Yifan Sun, Zhaoxin Fan, Faguo Wu, Hongwei Zheng, and Wenjun Wu</td></tr>
-                            <tr><td>17:35–17:50</td><td>Interpretable Neuro-Symbolic Learning for Robust Tennis Biomechanical Error Detection under Distribution Shift<div><small class="text-muted">[Paper M2209]</small></div></td><td>Chunchen Lin, Linhai Zhu, and Chunfeng Lin</td></tr>
+                            <tr><td>17:05–17:20</td><td>Interpretable Neuro-Symbolic Learning for Robust Tennis Biomechanical Error Detection under Distribution Shift<div><small class="text-muted">[Paper M2209]</small></div></td><td>Chunchen Lin, Linhai Zhu, and Chunfeng Lin</td></tr>
+                            <tr><td>17:20–17:35</td><td>Adaptive Reasoning with Recursive Decomposition<div><small class="text-muted">[Paper S16212]</small></div></td><td>Jingjun Tang, Limin Yan, Lixing Yu, Kun Yue, and Zhiwen Tang</td></tr>
+                            <tr><td>17:35–17:50</td><td>KARD: A Knowledge-Anchored Reasoning Distillation Framework for Domain-Specific Small-Scale LLMs via Attraction Basin Regularization<div><small class="text-muted">[Paper M1472]</small></div></td><td>Gen Li, Zhichao Yang, Yuanze Hu, Ye Qiu, Xinyu Wang, Yifan Sun, Zhaoxin Fan, Faguo Wu, Hongwei Zheng, and Wenjun Wu</td></tr>
                             <tr><td>17:50–17:55</td><td>Buffer</td><td>—</td></tr>
                             <tr><td>17:55–18:00</td><td><strong>Closing Remarks</strong></td><td>—</td></tr>
                         </tbody>
