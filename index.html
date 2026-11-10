@@ -59,28 +59,39 @@
             margin-bottom: 1rem;
         }
 
-        /* ---------- Workshop Chairs (four columns on desktop) ---------- */
-        .flex-container {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            justify-items: center;
-            gap: 20px;
-        }
-        .flex-item {
-            width: 100%;
-            max-width: 280px;
-            text-align: center;
-        }
-        @media (max-width: 991.98px) {
-            .flex-container {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-        @media (max-width: 575.98px) {
-            .flex-container {
-                grid-template-columns: 1fr;
-            }
-        }
+        
+/* Workshop Chairs: five columns */
+.flex-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    justify-items: center;
+    gap: 20px;
+}
+
+.flex-item {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+}
+
+@media (max-width: 1199.98px) {
+    .flex-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .flex-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575.98px) {
+    .flex-container {
+        grid-template-columns: 1fr;
+    }
+}
+
         .flex-item img {
             border-radius: 50%;
             width: 200px;
@@ -517,6 +528,21 @@
        href="https://xiepage.github.io/"
        target="_blank">
         Guo-Sen Xie
+    </a>
+</div>
+    
+<div class="flex-item" data-animation-delay="200">
+    <a href="https://faculty.hfut.edu.cn/chenyangbu/en/more/248193/jsjjgd/index.htm"
+       target="_blank">
+        <img class="img-responsive img-rounded"
+             src="img/chenyangbu.jpg"
+             alt="Chenyang Bu">
+    </a>
+
+    <a class="chair-name"
+       href="https://faculty.hfut.edu.cn/chenyangbu/en/more/248193/jsjjgd/index.htm"
+       target="_blank">
+        Chenyang Bu
     </a>
 </div>
 <div class="flex-item" data-animation-delay="200">
