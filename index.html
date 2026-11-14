@@ -59,39 +59,33 @@
             margin-bottom: 1rem;
         }
 
-        
-/* Workshop Chairs: five columns */
-.flex-container {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    justify-items: center;
-    gap: 20px;
-}
-
-.flex-item {
-    width: 100%;
-    max-width: 280px;
-    text-align: center;
-}
-
-@media (max-width: 1199.98px) {
-    .flex-container {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 991.98px) {
-    .flex-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 575.98px) {
-    .flex-container {
-        grid-template-columns: 1fr;
-    }
-}
-
+        /* ---------- Workshop Chairs (five columns on wide screens) ---------- */
+        .flex-container {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            justify-items: center;
+            gap: 20px;
+        }
+        .flex-item {
+            width: 100%;
+            max-width: 280px;
+            text-align: center;
+        }
+        @media (max-width: 1199.98px) {
+            .flex-container {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 991.98px) {
+            .flex-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 575.98px) {
+            .flex-container {
+                grid-template-columns: 1fr;
+            }
+        }
         .flex-item img {
             border-radius: 50%;
             width: 200px;
@@ -446,7 +440,12 @@
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-12 col-12 text-center">
                 <p class="lead mb-2"><strong>Sunday, November 15, 2026 — Workshop W29 (ARRL)</strong></p>
-                <p class="mb-4">Venue: Berlin 1</p>
+                <p class="mb-2">Venue: Berlin 1</p>
+                <p class="mb-4">
+                    <strong>Online Attendance Link:</strong>
+                    <a href="https://meeting.tencent.com/dm/RoPdHIsweVTq"
+                       target="_blank" rel="noopener noreferrer">Join via Tencent Meeting</a>
+                </p>
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover white">
                         <thead>
@@ -458,7 +457,7 @@
                         </thead>
                         <tbody>
                             <tr><td>13:30–13:35</td><td><strong>Opening Remarks</strong></td><td>—</td></tr>
-                            <tr><td>13:35–14:05</td><td><strong>Keynote Talk (Title TBA)</strong></td><td>Speaker TBA</td></tr>
+                            <tr><td>13:35–14:05</td><td><strong>Keynote Talk:</strong> When “Normal” Keeps Changing: Adaptable, Reliable, and Sustainable Anomaly Detection</td><td><a href="https://www.rcorizzo.com/" target="_blank" rel="noopener noreferrer">Roberto Corizzo</a></td></tr>
                             <tr><td>14:05–14:20</td><td>When Do Label-Free LLM Divergence Claims Reproduce? A Reliability Audit over Domain Taxonomies<div><small class="text-muted">[Paper DM1289]</small></div></td><td>Yinan LIU, Tengfei Ma, Weimin Lyu, Xinyu Dong, Xiaojie Fan, Rachel Wong, Richard Rosenthal, Henry Lam, and Fusheng Wang</td></tr>
                             <tr><td>14:20–14:35</td><td>Does Model Uncertainty Track Human Ambiguity? Evidence from Multi-Annotator Vision Benchmarks<div><small class="text-muted">[Paper S16213]</small></div></td><td>Manya Singh and Arjun Pakrashi</td></tr>
                             <tr><td>14:35–14:50</td><td>Divergence Aware Isolation Forest via Branch Occupancy Distributions<div><small class="text-muted">[Paper S16211]</small></div></td><td>Albert Rachwał, Alicja Rachwał, and Paweł Karczmarek</td></tr>
@@ -495,6 +494,20 @@
 </div>
 <div class="row">
 <div class="col-lg-10 mx-auto">
+    <h3 class="mb-3">When “Normal” Keeps Changing: Adaptable, Reliable, and Sustainable Anomaly Detection</h3>
+    <p class="lead mb-4">
+        <strong>Invited Speaker:</strong>
+        <a href="https://www.rcorizzo.com/" target="_blank" rel="noopener noreferrer">Dr. Roberto Corizzo</a>,
+        Assistant Professor, American University
+        (<a href="https://www.rcorizzo.com/" target="_blank" rel="noopener noreferrer">more info</a>)
+    </p>
+    <h4 class="mb-3">Abstract</h4>
+    <p style="text-align: justify;">
+        Anomaly detectors are often the part of a learning-enabled system that notices when it has met something unfamiliar. Most are trained once, on a fixed idea of normal behavior. In deployed settings such as network security, industrial inspection, energy, and healthcare, normal behavior shifts, old regimes return, and new kinds of anomalies appear without notice. A detector that adapts by overwriting what it learned will raise false alarms when an old regime comes back, and miss defects on a product it has forgotten.
+    </p>
+    <p style="text-align: justify;">
+        This talk examines anomaly detection through the workshop’s three themes. On adaptability, I introduce continual anomaly detection: models that learn new normal concepts from normal data alone, keep the ones they already know, and often get no signal that the data has changed. On reliability, I argue that benchmarks need the same scrutiny as models. I present a framework that turns ordinary tabular datasets into validated continual scenarios by filtering out tasks that are unlearnable, trivially transferable, or redundant. I also present InCLAD (NeurIPS 2026), a continual benchmark for industrial visual inspection, where task order and evaluation level change which method looks best. For the open-world case, I show how change point detection can drive model updates when task boundaries are unknown. On responsibility, I discuss the energy and memory cost of continual learning, from change detection on microcontrollers to energy-aware replay for time series in the cloud. I close with open problems and the open-source tools and benchmarks our group has released.
+    </p>
 </div>
 </div>
 </div>
@@ -530,18 +543,11 @@
         Guo-Sen Xie
     </a>
 </div>
-    
 <div class="flex-item" data-animation-delay="200">
-    <a href="https://faculty.hfut.edu.cn/chenyangbu/en/more/248193/jsjjgd/index.htm"
-       target="_blank">
-        <img class="img-responsive img-rounded"
-             src="img/chenyangbu.png"
-             alt="Chenyang Bu">
+    <a href="https://faculty.hfut.edu.cn/chenyangbu/en/more/248193/jsjjgd/index.htm" target="_blank" rel="noopener noreferrer">
+        <img class="img-responsive img-rounded" src="img/chenyangbu.jpg" alt="Chenyang Bu" />
     </a>
-
-    <a class="chair-name"
-       href="https://faculty.hfut.edu.cn/chenyangbu/en/more/248193/jsjjgd/index.htm"
-       target="_blank">
+    <a class="chair-name" href="https://faculty.hfut.edu.cn/chenyangbu/en/more/248193/jsjjgd/index.htm" target="_blank" rel="noopener noreferrer">
         Chenyang Bu
     </a>
 </div>
