@@ -252,7 +252,13 @@
     font-size: .88rem;
 }
 .arrl-challenge-title { margin-bottom: .38rem; font-weight: 700; }
-.arrl-challenge-subtitle { margin-bottom: 1.25rem; color: var(--awards-muted); }
+#awards #data-challenge { scroll-margin-top: 5.25rem; }
+.arrl-challenge-subtitle { margin-bottom: .45rem; color: var(--awards-muted); }
+.arrl-challenge-stats {
+    margin-bottom: 1.25rem;
+    color: var(--awards-accent-text);
+    font: 700 .95rem/1.5 var(--font-family-sans-serif);
+}
 .arrl-challenge-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -265,16 +271,19 @@
     border-radius: .35rem;
     background: white;
 }
-.arrl-challenge-task h4 {
+.arrl-challenge-task-heading {
     padding: 1.15rem 1.25rem;
-    margin: 0;
     border-top: .18rem solid var(--awards-accent);
     border-bottom: 1px solid var(--awards-border);
+}
+.arrl-challenge-task h4 {
+    margin: 0 0 .38rem;
     font-size: 1.12rem;
     font-weight: 700;
     line-height: 1.4;
 }
 .arrl-challenge-task h4 span { display: block; margin-bottom: .18rem; color: var(--awards-accent-text); font-size: .85rem; }
+.arrl-challenge-task-description { margin: 0; color: var(--awards-muted); line-height: 1.55; }
 .arrl-challenge-winners { padding: 0; margin: 0; list-style: none; }
 .arrl-challenge-winners li { padding: .95rem 1.25rem; }
 .arrl-challenge-winners li:first-child {
@@ -638,9 +647,13 @@
         <section id="data-challenge" aria-labelledby="arrl-data-challenge-heading">
             <h3 class="arrl-challenge-title" id="arrl-data-challenge-heading">Data Challenge</h3>
             <p class="arrl-challenge-subtitle">Adaptive and Reliable Open-World Social Dynamics Discovery</p>
+            <p class="arrl-challenge-stats">15 registered teams &middot; 52 submissions</p>
             <div class="arrl-challenge-grid">
                 <article class="arrl-challenge-task" aria-labelledby="arrl-task-one">
-                    <h4 id="arrl-task-one"><span>Task 1</span> Social Group Discovery in Trending Events</h4>
+                    <header class="arrl-challenge-task-heading">
+                        <h4 id="arrl-task-one"><span>Task 1</span> Social Group Discovery in Trending Events</h4>
+                        <p class="arrl-challenge-task-description">Identify social groups and their members across one or more trending events.</p>
+                    </header>
                     <ol class="arrl-challenge-winners" role="list">
                         <li>
                             <p class="arrl-award-place">First place</p>
@@ -663,7 +676,10 @@
                     </ol>
                 </article>
                 <article class="arrl-challenge-task" aria-labelledby="arrl-task-two">
-                    <h4 id="arrl-task-two"><span>Task 2</span> Open Event Detection in Social Media</h4>
+                    <header class="arrl-challenge-task-heading">
+                        <h4 id="arrl-task-two"><span>Task 2</span> Open Event Detection in Social Media</h4>
+                        <p class="arrl-challenge-task-description">Group posts about the same event and identify the event type.</p>
+                    </header>
                     <ol class="arrl-challenge-winners" role="list">
                         <li>
                             <p class="arrl-award-place">First place</p>
