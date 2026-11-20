@@ -215,27 +215,28 @@
 
 /* Awards */
 #awards {
-    --awards-green: #064c39;
-    --awards-ink: #1e342c;
-    --awards-gold: #bd965a;
-    color: var(--awards-ink);
-    background: #f5f8f5;
+    --awards-accent: #b0765b;
+    --awards-accent-text: #754b37;
+    --awards-border: #ded5cf;
+    --awards-highlight: #f8f0eb;
+    --awards-muted: #5c534e;
     scroll-margin-top: 4rem;
 }
-#awards .divider { border-color: var(--awards-gold); }
+#awards .divider { width: 10%; border-top: 2px solid var(--awards-accent); }
+.arrl-best-paper, #awards #data-challenge { margin-inline: auto; }
 .arrl-best-paper {
     padding: clamp(1.35rem, 4vw, 2.65rem);
     margin-bottom: clamp(2.2rem, 5vw, 3.5rem);
-    border-top: .25rem solid var(--awards-gold);
-    border-radius: .45rem;
-    color: white;
-    background: linear-gradient(120deg, #063e2f, #07533e);
+    border: 1px solid var(--awards-border);
+    border-top: .25rem solid var(--awards-accent);
+    border-radius: .35rem;
+    background: var(--awards-highlight);
 }
-.arrl-best-paper h3 { margin-bottom: .65rem; color: #f8dbab; font-size: 1.23rem; font-weight: 700; }
+.arrl-best-paper h3 { margin-bottom: .65rem; color: var(--awards-accent-text); font-size: 1.23rem; font-weight: 700; }
 .arrl-best-paper h4 {
     max-width: 45rem;
     margin-bottom: 1rem;
-    font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+    font-size: clamp(1.4rem, 3.2vw, 1.9rem);
     font-weight: 700;
     line-height: 1.25;
 }
@@ -247,11 +248,11 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    color: #ddebe3;
+    color: var(--awards-muted);
     font-size: .88rem;
 }
-.arrl-challenge-title { margin-bottom: .38rem; color: var(--awards-green); font-weight: 700; }
-.arrl-challenge-subtitle { margin-bottom: 1.25rem; color: #415950; }
+.arrl-challenge-title { margin-bottom: .38rem; font-weight: 700; }
+.arrl-challenge-subtitle { margin-bottom: 1.25rem; color: var(--awards-muted); }
 .arrl-challenge-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -260,39 +261,41 @@
 .arrl-challenge-task {
     min-width: 0;
     overflow: hidden;
-    border: 1px solid #d9e3dc;
-    border-radius: .45rem;
+    border: 1px solid var(--awards-border);
+    border-radius: .35rem;
     background: white;
 }
 .arrl-challenge-task h4 {
     padding: 1.15rem 1.25rem;
     margin: 0;
-    border-top: .18rem solid var(--awards-green);
-    border-bottom: 1px solid #e1e8e3;
-    color: var(--awards-green);
+    border-top: .18rem solid var(--awards-accent);
+    border-bottom: 1px solid var(--awards-border);
     font-size: 1.12rem;
     font-weight: 700;
     line-height: 1.4;
 }
-.arrl-challenge-task h4 span { display: block; margin-bottom: .18rem; color: #56695f; font-size: .85rem; }
+.arrl-challenge-task h4 span { display: block; margin-bottom: .18rem; color: var(--awards-accent-text); font-size: .85rem; }
 .arrl-challenge-winners { padding: 0; margin: 0; list-style: none; }
 .arrl-challenge-winners li { padding: .95rem 1.25rem; }
 .arrl-challenge-winners li:first-child {
     padding-left: calc(1.25rem - .2rem);
-    border-left: .2rem solid var(--awards-gold);
-    background: #edf5ef;
+    border-left: .2rem solid var(--awards-accent);
+    background: var(--awards-highlight);
 }
-.arrl-challenge-winners li + li { border-top: 1px solid #e1e8e3; }
+.arrl-challenge-winners li + li { border-top: 1px solid var(--awards-border); }
 .arrl-award-place {
     margin: 0 0 .17rem;
-    color: #795622;
-    font: 700 .85rem/1.45 "Merriweather Sans", sans-serif;
+    color: var(--awards-accent-text);
+    font: 700 .85rem/1.45 var(--font-family-sans-serif);
 }
-.arrl-challenge-winners h5 { margin: 0 0 .35rem; color: var(--awards-green); font-size: 1.2rem; font-weight: 700; }
+.arrl-challenge-winners h5 { margin: 0 0 .35rem; font-size: 1.2rem; font-weight: 700; }
 .arrl-award-members { margin-bottom: .25rem; overflow-wrap: anywhere; }
-.arrl-award-school { margin: 0; color: #415950; font-size: .9rem; font-weight: 700; }
+.arrl-award-school { margin: 0; color: var(--awards-muted); font-size: .9rem; font-weight: 700; }
 @media (max-width: 767.98px) {
     .arrl-challenge-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 992px) {
+    .arrl-best-paper, #awards #data-challenge { width: 83.333%; }
 }
 </style></head>
 <body id="page-top">
@@ -616,7 +619,7 @@
 </div>
 </section>
 <!-- Awards -->
-<section class="page-section" id="awards" aria-labelledby="arrl-awards-heading">
+<section class="bg-light page-section" id="awards" aria-labelledby="arrl-awards-heading">
     <div class="container">
         <h2 class="section-heading text-center text-uppercase" id="arrl-awards-heading">ARRL Awards</h2>
         <hr class="divider my-4"/>
